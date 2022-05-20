@@ -12,8 +12,8 @@
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
 body,
@@ -44,8 +44,13 @@ picture {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   max-width: 464rem;
   margin: 3rem auto;
@@ -54,7 +59,6 @@ main {
 
 .flow > * + * {
   margin-top: var(--flow-space, 1rem);
-  /* border: 1px solid red; */
 }
 
 .header__logo {
@@ -86,14 +90,25 @@ main {
 }
 
 .card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 1.5rem auto;
 }
 
 .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
@@ -104,7 +119,11 @@ main {
   border-radius: 50%;
   background-color: var(--color-neutral-200);
   cursor: pointer;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, background-color 0.3s;
   transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, -webkit-transform 0.3s;
 }
 
 .icon__image:hover {
@@ -112,6 +131,8 @@ main {
 }
 
 .icon__image:active {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
   transform: scale(1.15);
 }
 
@@ -126,8 +147,14 @@ main {
 }
 
 .score {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 2rem;
   font-weight: 700;
@@ -152,9 +179,15 @@ main {
 
 @media screen and (min-width: 376px) {
   .card__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .icon {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     margin-bottom: 1rem;
   }
