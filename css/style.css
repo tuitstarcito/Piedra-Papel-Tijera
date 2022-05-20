@@ -29,27 +29,27 @@ h1 {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--color-neutral-200);
-  padding: 1.6rem;
   min-height: 100vh;
+  padding: 1.6rem;
+  background-color: var(--color-neutral-200);
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   text-align: center;
 }
 
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 464rem;
   margin: 3rem auto;
-  display: flex;
-  justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
 }
 
 .flow > * + * {
@@ -64,11 +64,13 @@ main {
 
 .card {
   width: 100%;
-  background-color: var(--color-neutral-100);
-  padding: 1.5rem;
-  border-radius: 0.6rem;
   min-width: 20rem;
   max-width: 22rem;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  background-color: var(--color-neutral-100);
+  -webkit-box-shadow: 5px 5px 16px -4px rgba(154, 154154, 0.35);
+  box-shadow: 5px 5px 16px -4px rgba(154, 154, 154, 0.35);
 }
 
 .card__header {
@@ -85,9 +87,9 @@ main {
 
 .card__body {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 1.5rem auto;
-  align-items: center;
 }
 
 .icon {
@@ -96,11 +98,11 @@ main {
   gap: 1rem;
 }
 .icon__image {
-  background-color: var(--color-neutral-200);
+  width: 4.5rem;
+  height: 4.5rem;
   padding: 1rem;
   border-radius: 50%;
-  height: 4.5rem;
-  width: 4.5rem;
+  background-color: var(--color-neutral-200);
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
 }
@@ -114,21 +116,21 @@ main {
 }
 
 .card__box {
-  background-color: var(--color-neutral-200);
   height: 2.5rem;
-  line-height: 2.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-neutral-200);
   color: var(--color-secondary-100);
   font-weight: 600;
-  border-radius: 0.5rem;
-  margin-top: 0.5rem;
+  line-height: 2.5rem;
 }
 
 .score {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-weight: 700;
+  justify-content: space-between;
   margin-top: 2rem;
+  font-weight: 700;
 }
 
 .score__item {
@@ -136,11 +138,11 @@ main {
 }
 
 .score__counter {
-  background-color: var(--color-secondary-100);
+  margin-top: 0.5rem;
   padding: 1rem;
   border-radius: 0.7rem;
+  background-color: var(--color-secondary-100);
   color: var(--color-neutral-100);
-  margin-top: 0.5rem;
 }
 
 .footer {
@@ -163,9 +165,7 @@ main {
 }
 
 @media screen and (min-width: 700px) {
-  
-h1 {
-  font-size: 2.4rem;
-}
-  
+  h1 {
+    font-size: 2.4rem;
+  }
 }
