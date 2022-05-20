@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Piedra, Papel o Tijera</h1>
+      <figure>
+        <img
+          class="header__logo"
+          src="img/logo.png"
+          alt="logo piedra, papel o tijera"
+        />
+      </figure>
+    </header>
+
+    <main>
+      <article class="card flow">
+        <header class="card__header flow">
+          <h2 class="card__title">If, Else and Else If</h2>
+          <p class="card__text">
+            Elige tu mejor opción. <br />
+            La computadora elegirá al azar.
+          </p>
+        </header>
+        <div class="card__body">
+          <div class="icon">
+            <img
+              class="icon__image"
+              onclick="option(0)"
+              src="img/icon-rock.svg"
+              alt="Icono Piedra"
+            />
+            <img
+              class="icon__image"
+              onclick="option(1)"
+              src="img/icon-paper.svg"
+              alt="Icono Papel"
+            />
+            <img
+              class="icon__image"
+              onclick="option(2)"
+              src="img/icon-scissors.svg"
+              alt="Icono Tijeras"
+            />
+          </div>
+          <div class="card__option flow">
+            <div>
+              <span class="card__text">El usuario elige:</span>
+              <div class="card__box" id="userOption"></div>
+            </div>
+
+            <div>
+              <span class="card__text">La computadora elige:</span>
+              <div class="card__box" id="pcOption"></div>
+            </div>
+
+            <div>
+              <span class="card__text">Resultado:</span>
+              <div class="card__box" id="result"></div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="score">
+          <div class="score__item">
+            <span>Usuario</span>
+            <p class="score__counter" id="userCounter">0</p>
+          </div>
+
+          <div class="score__item">
+            <span>PC</span>
+            <p class="score__counter" id="pcCounter">0</p>
+          </div>
+        </footer>
+      </article>
+      <article class="card flow">
+        <header class="card__header flow">
+          <h2 class="card__title">Switch Statement</h2>
+          <p class="card__text">
+            Elige tu mejor opción. <br />
+            La computadora elegirá al azar.
+          </p>
+        </header>
+        <div class="card__body">
+          <div class="icon">
+            <img
+              class="icon__image"
+              onclick="sOption(0)"
+              src="img/icon-rock.svg"
+              alt="Icono Piedra"
+            />
+            <img
+              class="icon__image"
+              onclick="sOption(1)"
+              src="img/icon-paper.svg"
+              alt="Icono Papel"
+            />
+            <img
+              class="icon__image"
+              onclick="sOption(2)"
+              src="img/icon-scissors.svg"
+              alt="Icono Tijeras"
+            />
+          </div>
+          <div class="card__option flow">
+            <div>
+              <span class="card__text">El usuario elige:</span>
+              <div class="card__box" id="sUserOption"></div>
+            </div>
+
+            <div>
+              <span class="card__text">La computadora elige:</span>
+              <div class="card__box" id="sPcOption"></div>
+            </div>
+
+            <div>
+              <span class="card__text">Resultado:</span>
+              <div class="card__box" id="sResult"></div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="score">
+          <div class="score__item">
+            <span>Usuario</span>
+            <p class="score__counter" id="sUserCounter">0</p>
+          </div>
+
+          <div class="score__item">
+            <span>PC</span>
+            <p class="score__counter" id="sPcCounter">0</p>
+          </div>
+        </footer>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">Realizado por Manuel Mayta</p>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>
